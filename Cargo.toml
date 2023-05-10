@@ -3,12 +3,16 @@ name = "wasm-timer"
 edition = "2018"
 description = "Abstraction over std::time::Instant and futures-timer that works on WASM"
 version = "0.2.5"
-authors = ["Pierre Krieger <pierre.krieger1708@gmail.com>"]
+authors = ["Youngjoon Lee <taxihighway@gmail.com>"]
 license = "MIT"
-repository = "https://github.com/tomaka/wasm-timer"
+repository = "https://github.com/youngjoon-lee/wasm-timer"
+
+# [features]
+# wasm-bindgen = ["instant/wasm-bindgen"]
 
 [dependencies]
 futures = "0.3.1"
+instant = "0.1.12"
 parking_lot = "0.11"
 pin-utils = "0.1.0"
 
@@ -17,6 +21,7 @@ js-sys = "0.3.31"
 wasm-bindgen = "0.2.37"
 wasm-bindgen-futures = "0.4.4"
 web-sys = { version = "0.3.31", features = ["Performance", "Window"] }
+instant = { version = "0.1.12", features = ["wasm-bindgen"] }
 
 [dev-dependencies]
 async-std = "1.0"

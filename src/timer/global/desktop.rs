@@ -1,3 +1,4 @@
+use instant::Instant;
 use std::future::Future;
 use std::io;
 use std::mem::{self, ManuallyDrop};
@@ -6,7 +7,6 @@ use std::sync::Arc;
 use std::task::{Context, RawWaker, RawWakerVTable, Waker};
 use std::thread;
 use std::thread::Thread;
-use std::time::Instant;
 
 use pin_utils::pin_mut;
 

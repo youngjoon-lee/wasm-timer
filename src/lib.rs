@@ -20,11 +20,7 @@
 
 pub use timer::*;
 
-#[cfg(not(all(target_arch = "wasm32", target_os = "unknown")))]
-pub use std::time::{Instant, SystemTime, UNIX_EPOCH};
-#[cfg(all(target_arch = "wasm32", target_os = "unknown"))]
-pub use wasm::*;
+pub use instant::{Instant, SystemTime};
+pub use std::time::UNIX_EPOCH;
 
 mod timer;
-#[cfg(all(target_arch = "wasm32", target_os = "unknown"))]
-mod wasm;
